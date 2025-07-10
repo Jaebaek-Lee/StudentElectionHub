@@ -343,7 +343,7 @@ def render_voting_status():
         st.rerun()
     
     # Overall statistics
-    stats = st.session_state.data_manager.get_voting_stats()
+    stats = st.session_state.data_manager.db.get_voting_stats()
     
     col1, col2, col3 = st.columns(3)
     
@@ -351,24 +351,24 @@ def render_voting_status():
         st.metric("총 참여자", stats['total_participants'])
     
     with col2:
-        st.metric("투표 완료", stats['total_votes'])
+        st.metric("투표 완료", stats['total_voted'])
     
     with col3:
-        st.metric("투표율", f"{stats['vote_percentage']:.1f}%")
+        st.metric("투표율", f"{stats['participation_rate']:.1f}%")
     
     # Progress bar
-    progress = stats['total_votes'] / stats['total_participants'] if stats['total_participants'] > 0 else 0
+    progress = stats['total_voted'] / stats['total_participants'] if stats['total_participants'] > 0 else 0
     st.progress(progress)
     
     st.markdown("---")
     
     # Voting results chart
-    results_data = st.session_state.data_manager.get_results_data()
+    results_data = st.session_state.data_manager.db.get_results_data()
     
-    if results_data:
+    if results_data and results_data['sorted_results']:
         # Create bar chart
-        teams = [r['team'] for r in results_data]
-        votes = [r['votes'] for r in results_data]
+        teams = [team for team, votes in results_data['sorted_results']]
+        votes = [votes for team, votes in results_data['sorted_results']]
         
         fig = px.bar(
             x=teams,
@@ -391,23 +391,26 @@ def render_voting_status():
         # Results table
         st.markdown("### 📋 상세 결과")
         
-        df = pd.DataFrame(results_data)
+        # Create DataFrame from sorted results
+        df_data = [{'팀명': team, '득표수': votes} for team, votes in results_data['sorted_results']]
+        df = pd.DataFrame(df_data)
         df.index = range(1, len(df) + 1)
-        df.columns = ['팀명', '득표수']
         
         st.dataframe(df, use_container_width=True)
         
         # Top teams highlight
-        if len(results_data) >= 2:
+        if len(results_data['sorted_results']) >= 2:
             st.markdown("### 🏆 상위 2팀")
             
             col1, col2 = st.columns(2)
             
             with col1:
-                st.success(f"🥇 **1위: {results_data[0]['team']}** - {results_data[0]['votes']}표")
+                first_team, first_votes = results_data['sorted_results'][0]
+                st.success(f"🥇 **1위: {first_team}** - {first_votes}표")
             
             with col2:
-                st.info(f"🥈 **2위: {results_data[1]['team']}** - {results_data[1]['votes']}표")
+                second_team, second_votes = results_data['sorted_results'][1]
+                st.info(f"🥈 **2위: {second_team}** - {second_votes}표")
     
     else:
         st.info("아직 투표가 진행되지 않았습니다.")
