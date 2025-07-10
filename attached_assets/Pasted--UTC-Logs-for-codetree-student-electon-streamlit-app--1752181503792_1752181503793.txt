@@ -1,0 +1,4146 @@
+
+[     UTC     ] Logs for codetree-student-electon.streamlit.app/
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[20:52:11] 🚀 Starting up repository: 'studentelectionhub', branch: 'main', main module: 'app.py'
+
+[20:52:11] 🐙 Cloning repository...
+
+[20:52:11] 🐙 Cloning into '/mount/src/studentelectionhub'...
+
+[20:52:11] 🐙 Cloned repository!
+
+[20:52:11] 🐙 Pulling code changes from Github...
+
+[20:52:12] 📦 Processing dependencies...
+
+Prepared 40 packages in 16.06s
+
+Installed 40 packages in 1.16s
+
+ + altair==5.5.0
+
+ + attrs==25.3.0
+
+ + blinker==1.9.0
+
+ + cachetools==6.1.0
+
+ + certifi==2025.7.9
+
+ + charset-normalizer==3.4.2
+
+ + click==[2025-07-10 20:52:30.708791] 8.2.1
+
+ + dnspython==2.7.0
+
+ + email-validator==2.2.0
+
+ + gitdb==4.0.12
+
+ + [2025-07-10 20:52:30.709176] gitpython==3.1.44
+
+ + idna==3.10
+
+ + jinja2==[2025-07-10 20:52:30.709407] 3.1.6
+
+ + jsonschema==4.24.0
+
+ + jsonschema-specifications[2025-07-10 20:52:30.709622] ==2025.4.1
+
+ + markupsafe==3.0.2
+
+ + [2025-07-10 20:52:30.709827] narwhals==1.46.0
+
+ + numpy==2.3.1
+
+ + packaging==25.0[2025-07-10 20:52:30.710036] 
+
+ + pandas==2.3.1
+
+ + pillow==11.3.0
+
+ + plotly==6.2.0[2025-07-10 20:52:30.710284] 
+
+ + protobuf==6.31.1
+
+ + pyarrow==20.0.0
+
+ + pydeck==[2025-07-10 20:52:30.710503] 0.9.1
+
+ + python-dateutil==2.9.0.post0
+
+ + pytz==2025.2[2025-07-10 20:52:30.710709] 
+
+ + referencing==0.36.2
+
+ + requests==2.32.4
+
+ + rpds-py==0.26.0[2025-07-10 20:52:30.710967] 
+
+ + six==1.17.0
+
+ + smmap==5.0.2
+
+ +[2025-07-10 20:52:30.711345]  streamlit==1.46.1
+
+ + tenacity==9.1.2
+
+ + toml[2025-07-10 20:52:30.711840] ==0.10.2
+
+ + tornado==6.5.1
+
+ + typing-extensions==4.14.1
+
+ + tzdata==2025.2
+
+ +[2025-07-10 20:52:30.712317]  urllib3==2.5.0
+
+ + watchdog==6.0.0
+
+[20:52:31] 🐍 Python dependencies were installed from /mount/src/studentelectionhub/uv.lock using uv-sync.
+
+[20:52:31] 📦 WARN: More than one requirements file detected in the repository. Available options: uv-sync /mount/src/studentelectionhub/uv.lock, uv /mount/src/studentelectionhub/requirements.txt, poetry /mount/src/studentelectionhub/pyproject.toml. Used: uv-sync with /mount/src/studentelectionhub/uv.lock
+
+Check if streamlit is installed
+
+Streamlit is already installed
+
+[20:52:33] 📦 Processed dependencies!
+
+
+
+
+2025-07-10 20:52:49.073 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:53:36.785 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:57:16.112 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+[20:57:16] ❗️ 
+
+2025-07-10 20:57:16.205 503 GET /script-health-check (127.0.0.1) 99.56ms
+
+2025-07-10 20:57:21.064 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:57:21.254 503 GET /script-health-check (127.0.0.1) 195.90ms
+
+2025-07-10 20:57:26.230 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:57:26.442 503 GET /script-health-check (127.0.0.1) 219.64ms
+
+2025-07-10 20:57:31.061 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:57:31.285 503 GET /script-health-check (127.0.0.1) 228.47ms
+
+2025-07-10 20:57:36.151 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:57:36.382 503 GET /script-health-check (127.0.0.1) 238.17ms
+
+2025-07-10 20:57:41.094 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:57:41.496 503 GET /script-health-check (127.0.0.1) 417.16ms
+
+2025-07-10 20:57:46.098 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:57:46.379 503 GET /script-health-check (127.0.0.1) 286.21ms
+
+2025-07-10 20:57:51.562 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:57:52.069 503 GET /script-health-check (127.0.0.1) 511.86ms
+
+2025-07-10 20:57:56.157 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:57:56.459 503 GET /script-health-check (127.0.0.1) 306.90ms
+
+2025-07-10 20:58:01.408 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:58:01.842 503 GET /script-health-check (127.0.0.1) 443.40ms
+
+2025-07-10 20:58:06.503 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:58:06.816 503 GET /script-health-check (127.0.0.1) 318.69ms
+
+2025-07-10 20:58:11.335 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:58:11.738 503 GET /script-health-check (127.0.0.1) 410.48ms
+
+2025-07-10 20:58:16.494 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:58:17.350 503 GET /script-health-check (127.0.0.1) 860.60ms
+
+2025-07-10 20:58:21.185 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:58:21.685 503 GET /script-health-check (127.0.0.1) 504.92ms
+
+2025-07-10 20:58:26.051 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:58:26.269 503 GET /script-health-check (127.0.0.1) 224.04ms
+
+2025-07-10 20:58:31.472 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:58:31.743 503 GET /script-health-check (127.0.0.1) 276.02ms
+
+2025-07-10 20:58:36.645 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:58:36.879 503 GET /script-health-check (127.0.0.1) 241.33ms
+
+2025-07-10 20:58:41.030 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:58:41.298 503 GET /script-health-check (127.0.0.1) 273.47ms
+
+2025-07-10 20:58:46.027 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:58:46.303 503 GET /script-health-check (127.0.0.1) 280.37ms
+
+2025-07-10 20:58:50.967 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:58:51.186 503 GET /script-health-check (127.0.0.1) 223.53ms
+
+2025-07-10 20:58:55.997 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:58:56.246 503 GET /script-health-check (127.0.0.1) 257.42ms
+
+2025-07-10 20:59:00.993 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:59:01.237 503 GET /script-health-check (127.0.0.1) 247.01ms
+
+2025-07-10 20:59:06.024 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:59:06.261 503 GET /script-health-check (127.0.0.1) 246.58ms
+
+2025-07-10 20:59:10.992 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:59:11.217 503 GET /script-health-check (127.0.0.1) 229.74ms
+
+2025-07-10 20:59:16.065 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:59:16.358 503 GET /script-health-check (127.0.0.1) 298.99ms
+
+2025-07-10 20:59:20.947 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:59:21.220 503 GET /script-health-check (127.0.0.1) 276.75ms
+
+2025-07-10 20:59:25.930 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:59:26.206 503 GET /script-health-check (127.0.0.1) 282.74ms
+
+2025-07-10 20:59:31.012 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:59:31.345 503 GET /script-health-check (127.0.0.1) 340.18ms
+
+2025-07-10 20:59:36.015 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:59:36.350 503 GET /script-health-check (127.0.0.1) 340.62ms
+
+2025-07-10 20:59:41.007 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:59:41.212 503 GET /script-health-check (127.0.0.1) 210.24ms
+
+2025-07-10 20:59:46.005 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:59:46.272 503 GET /script-health-check (127.0.0.1) 270.91ms
+
+2025-07-10 20:59:51.012 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:59:51.224 503 GET /script-health-check (127.0.0.1) 218.69ms
+
+2025-07-10 20:59:55.977 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 20:59:56.186 503 GET /script-health-check (127.0.0.1) 215.37ms
+
+2025-07-10 21:00:01.019 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:00:01.212 503 GET /script-health-check (127.0.0.1) 197.05ms
+
+2025-07-10 21:00:05.926 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:00:06.158 503 GET /script-health-check (127.0.0.1) 237.14ms
+
+2025-07-10 21:00:10.996 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:00:11.209 503 GET /script-health-check (127.0.0.1) 217.52ms
+
+2025-07-10 21:00:16.006 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:00:16.202 503 GET /script-health-check (127.0.0.1) 202.00ms
+
+2025-07-10 21:00:20.921 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:00:21.150 503 GET /script-health-check (127.0.0.1) 234.02ms
+
+2025-07-10 21:00:25.989 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:00:26.200 503 GET /script-health-check (127.0.0.1) 217.80ms
+
+2025-07-10 21:00:30.995 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:00:31.220 503 GET /script-health-check (127.0.0.1) 230.10ms
+
+2025-07-10 21:00:35.977 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:00:36.166 503 GET /script-health-check (127.0.0.1) 196.00ms
+
+2025-07-10 21:00:40.976 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:00:41.188 503 GET /script-health-check (127.0.0.1) 219.93ms
+
+2025-07-10 21:00:45.907 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:00:46.093 503 GET /script-health-check (127.0.0.1) 191.14ms
+
+2025-07-10 21:00:50.979 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:00:51.184 503 GET /script-health-check (127.0.0.1) 214.39ms
+
+2025-07-10 21:00:56.078 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:00:56.276 503 GET /script-health-check (127.0.0.1) 213.75ms
+
+2025-07-10 21:01:00.918 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:01:01.122 503 GET /script-health-check (127.0.0.1) 209.74ms
+
+2025-07-10 21:01:05.900 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:01:06.099 503 GET /script-health-check (127.0.0.1) 203.08ms
+
+2025-07-10 21:01:10.899 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:01:11.099 503 GET /script-health-check (127.0.0.1) 204.88ms
+
+2025-07-10 21:01:15.888 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:01:16.090 503 GET /script-health-check (127.0.0.1) 210.50ms
+
+2025-07-10 21:01:20.901 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:01:21.109 503 GET /script-health-check (127.0.0.1) 213.78ms
+
+2025-07-10 21:01:25.876 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:01:26.039 503 GET /script-health-check (127.0.0.1) 167.84ms
+
+2025-07-10 21:01:30.965 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:01:31.166 503 GET /script-health-check (127.0.0.1) 207.40ms
+
+2025-07-10 21:01:35.909 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:01:36.098 503 GET /script-health-check (127.0.0.1) 193.83ms
+
+2025-07-10 21:01:40.894 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:01:41.088 503 GET /script-health-check (127.0.0.1) 198.83ms
+
+2025-07-10 21:01:45.900 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:01:46.044 503 GET /script-health-check (127.0.0.1) 148.12ms
+
+2025-07-10 21:01:50.878 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:01:51.073 503 GET /script-health-check (127.0.0.1) 201.33ms
+
+2025-07-10 21:01:55.904 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:01:56.067 503 GET /script-health-check (127.0.0.1) 168.28ms
+
+2025-07-10 21:02:00.883 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:02:01.083 503 GET /script-health-check (127.0.0.1) 205.66ms
+
+2025-07-10 21:02:05.938 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:02:06.141 503 GET /script-health-check (127.0.0.1) 208.03ms
+
+2025-07-10 21:02:10.996 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:02:11.176 503 GET /script-health-check (127.0.0.1) 185.53ms
+
+2025-07-10 21:02:15.937 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:02:16.125 503 GET /script-health-check (127.0.0.1) 195.34ms
+
+2025-07-10 21:02:20.949 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:02:21.155 503 GET /script-health-check (127.0.0.1) 211.90ms
+
+2025-07-10 21:02:25.887 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:02:26.092 503 GET /script-health-check (127.0.0.1) 210.11ms
+
+2025-07-10 21:02:31.049 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:02:31.284 503 GET /script-health-check (127.0.0.1) 241.05ms
+
+2025-07-10 21:02:36.068 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:02:36.339 503 GET /script-health-check (127.0.0.1) 278.28ms
+
+2025-07-10 21:02:41.006 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:02:41.344 503 GET /script-health-check (127.0.0.1) 342.34ms
+
+2025-07-10 21:02:45.990 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:02:46.226 503 GET /script-health-check (127.0.0.1) 241.25ms
+
+2025-07-10 21:02:50.934 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:02:51.139 503 GET /script-health-check (127.0.0.1) 210.61ms
+
+2025-07-10 21:02:56.003 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:02:56.227 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:02:56.304 503 GET /script-health-check (127.0.0.1) 306.23ms
+
+2025-07-10 21:03:00.950 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:03:01.123 503 GET /script-health-check (127.0.0.1) 180.48ms
+
+2025-07-10 21:03:05.894 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:03:06.082 503 GET /script-health-check (127.0.0.1) 193.59ms
+
+2025-07-10 21:03:10.918 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:03:11.090 503 GET /script-health-check (127.0.0.1) 177.65ms
+
+2025-07-10 21:03:15.965 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:03:16.178 503 GET /script-health-check (127.0.0.1) 220.23ms
+
+2025-07-10 21:03:20.910 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:03:21.081 503 GET /script-health-check (127.0.0.1) 176.66ms
+
+2025-07-10 21:03:25.903 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:03:26.111 503 GET /script-health-check (127.0.0.1) 213.62ms
+
+2025-07-10 21:03:30.944 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:03:31.179 503 GET /script-health-check (127.0.0.1) 239.41ms
+
+2025-07-10 21:03:35.959 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:03:36.117 503 GET /script-health-check (127.0.0.1) 163.31ms
+
+2025-07-10 21:03:40.914 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:03:41.103 503 GET /script-health-check (127.0.0.1) 196.34ms
+
+2025-07-10 21:03:45.886 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:03:46.079 503 GET /script-health-check (127.0.0.1) 199.73ms
+
+2025-07-10 21:03:50.911 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:03:51.115 503 GET /script-health-check (127.0.0.1) 211.40ms
+
+2025-07-10 21:03:55.956 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:03:56.123 503 GET /script-health-check (127.0.0.1) 175.01ms
+
+2025-07-10 21:04:00.873 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:04:01.070 503 GET /script-health-check (127.0.0.1) 203.10ms
+
+2025-07-10 21:04:05.915 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:04:06.144 503 GET /script-health-check (127.0.0.1) 233.45ms
+
+2025-07-10 21:04:10.925 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:04:11.128 503 GET /script-health-check (127.0.0.1) 207.87ms
+
+2025-07-10 21:04:15.908 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:04:16.111 503 GET /script-health-check (127.0.0.1) 208.25ms
+
+2025-07-10 21:04:21.084 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:04:21.324 503 GET /script-health-check (127.0.0.1) 248.60ms
+
+2025-07-10 21:04:25.887 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:04:26.086 503 GET /script-health-check (127.0.0.1) 205.83ms
+
+2025-07-10 21:04:30.951 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:04:31.160 503 GET /script-health-check (127.0.0.1) 218.44ms
+
+2025-07-10 21:04:35.890 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:04:36.097 503 GET /script-health-check (127.0.0.1) 213.06ms
+
+2025-07-10 21:04:40.898 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:04:41.097 503 GET /script-health-check (127.0.0.1) 205.73ms
+
+2025-07-10 21:04:45.941 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:04:46.116 503 GET /script-health-check (127.0.0.1) 180.66ms
+
+2025-07-10 21:04:50.978 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:04:51.202 503 GET /script-health-check (127.0.0.1) 229.17ms
+
+2025-07-10 21:04:55.940 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:04:56.155 503 GET /script-health-check (127.0.0.1) 223.05ms
+
+main
+jaebaek-lee/studentelectionhub/main/app.py
+
+
