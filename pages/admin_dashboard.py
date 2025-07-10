@@ -148,8 +148,9 @@ def render_participant_management():
         participant_data = []
         all_teams = st.session_state.data_manager.db.get_teams()
         
+        # participants is a dictionary from database manager
         for email, info in participants.items():
-            team = info.get('team', "미할당")
+            team = info.get('team') or "미할당"
             voted = "✅" if st.session_state.data_manager.has_voted(email) else "❌"
             
             participant_data.append({
@@ -207,18 +208,26 @@ def render_team_management():
     st.markdown("## 🏆 팀 관리")
     
     # Team statistics
-    team_stats = st.session_state.data_manager.get_team_stats()
+    team_stats = st.session_state.data_manager.db.get_team_stats()
+    votes_data = st.session_state.data_manager.db.get_votes()
+    
+    # Calculate vote counts per team
+    vote_counts = {}
+    for vote in votes_data.values():
+        for team in vote.get("teams", []):
+            vote_counts[team] = vote_counts.get(team, 0) + 1
     
     col1, col2 = st.columns(2)
     
     with col1:
         st.markdown("### 📊 팀별 현황")
         
-        for stat in team_stats:
+        for team, member_count in team_stats["team_counts"].items():
+            vote_count = vote_counts.get(team, 0)
             st.metric(
-                f"{stat['team']}",
-                f"멤버: {stat['assigned_members']}명",
-                f"득표: {stat['votes_received']}표"
+                f"{team}",
+                f"멤버: {member_count}명",
+                f"득표: {vote_count}표"
             )
     
     with col2:
@@ -253,8 +262,8 @@ def render_team_management():
                 
                 with col3:
                     # Show team member count
-                    team_stats = st.session_state.data_manager.db.get_team_stats()
-                    member_count = team_stats["team_counts"].get(team, 0)
+                    team_stats_data = st.session_state.data_manager.db.get_team_stats()
+                    member_count = team_stats_data["team_counts"].get(team, 0)
                     st.write(f"멤버: {member_count}명")
                     
                     # Show warning if last team
@@ -313,14 +322,16 @@ def render_team_management():
                 st.write(f"**{email}**")
             
             with col2:
+                # Get current teams from database
+                current_teams = st.session_state.data_manager.db.get_teams()
                 selected_team = st.selectbox(
                     "팀 할당",
-                    ["선택하세요"] + st.session_state.teams,
+                    ["선택하세요"] + current_teams,
                     key=f"assign_{email}"
                 )
                 
                 if selected_team != "선택하세요":
-                    st.session_state.team_assignments[email] = selected_team
+                    st.session_state.data_manager.db.assign_team(email, selected_team)
                     st.rerun()
 
 def render_voting_status():

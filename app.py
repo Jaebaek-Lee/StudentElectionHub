@@ -540,7 +540,12 @@ def initialize_app():
     """Initialize the application and session state"""
     # Initialize data manager
     if 'data_manager' not in st.session_state:
-        st.session_state.data_manager = DataManager()
+        try:
+            st.session_state.data_manager = DataManager()
+        except ValueError as e:
+            st.error("데이터베이스 연결에 실패했습니다. 환경 변수가 올바르게 설정되어 있는지 확인해주세요.")
+            st.error(f"오류: {str(e)}")
+            st.stop()
     
     # Initialize authentication state
     if 'is_authenticated' not in st.session_state:
@@ -560,6 +565,17 @@ def initialize_app():
     
     if 'show_results' not in st.session_state:
         st.session_state.show_results = False
+    
+    # Initialize teams data
+    if 'teams' not in st.session_state:
+        if 'data_manager' in st.session_state:
+            st.session_state.teams = st.session_state.data_manager.db.get_teams()
+        else:
+            st.session_state.teams = []
+    
+    # Initialize admin page state
+    if 'admin_page' not in st.session_state:
+        st.session_state.admin_page = "participants"
 
 def main():
     """Main application entry point"""

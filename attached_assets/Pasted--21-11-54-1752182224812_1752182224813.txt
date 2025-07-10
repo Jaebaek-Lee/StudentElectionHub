@@ -1,0 +1,325 @@
+────────────────────────────────────────────────────────────────────────────────────────
+
+
+[21:11:54] 🐍 Python dependencies were installed from /mount/src/studentelectionhub/requirements.txt using uv.
+
+[21:11:54] 📦 WARN: More than one requirements file detected in the repository. Available options: uv /mount/src/studentelectionhub/requirements.txt, poetry /mount/src/studentelectionhub/pyproject.toml. Used: uv with /mount/src/studentelectionhub/requirements.txt
+
+Check if streamlit is installed
+
+Streamlit is already installed
+
+[21:11:56] 📦 Processed dependencies!
+
+
+
+
+[21:12:08] 🐙 Pulling code changes from Github...
+
+[21:12:08] 📦 Processing dependencies...
+
+[21:12:08] 📦 Processed dependencies!
+
+[21:12:10] 🔄 Updated app!
+
+────────────────────── Traceback (most recent call last) ───────────────────────
+
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+
+                                                                                
+
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+
+  nner/script_runner.py:667 in code_to_exec                                     
+
+                                                                                
+
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+
+  nner/script_runner.py:165 in _mpa_v1                                          
+
+                                                                                
+
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.  
+
+  py:300 in run                                                                 
+
+                                                                                
+
+  /mount/src/studentelectionhub/app.py:599 in <module>                          
+
+                                                                                
+
+    596 │   │   st.rerun()                                                      
+
+    597                                                                         
+
+    598 if __name__ == "__main__":                                              
+
+  ❱ 599 │   main()                                                              
+
+    600                                                                         
+
+                                                                                
+
+  /mount/src/studentelectionhub/app.py:566 in main                              
+
+                                                                                
+
+    563                                                                         
+
+    564 def main():                                                             
+
+    565 │   """Main application entry point"""                                  
+
+  ❱ 566 │   initialize_app()                                                    
+
+    567 │                                                                       
+
+    568 │   # Add scroll to top functionality                                   
+
+    569 │   st.markdown("""                                                     
+
+                                                                                
+
+  /mount/src/studentelectionhub/app.py:543 in initialize_app                    
+
+                                                                                
+
+    540 │   """Initialize the application and session state"""                  
+
+    541 │   # Initialize data manager                                           
+
+    542 │   if 'data_manager' not in st.session_state:                          
+
+  ❱ 543 │   │   st.session_state.data_manager = DataManager()                   
+
+    544 │                                                                       
+
+    545 │   # Initialize authentication state                                   
+
+    546 │   if 'is_authenticated' not in st.session_state:                      
+
+                                                                                
+
+  /mount/src/studentelectionhub/utils/data_manager.py:11 in __init__            
+
+                                                                                
+
+      8                                                                         
+
+      9 class DataManager:                                                      
+
+     10 │   def __init__(self):                                                 
+
+  ❱  11 │   │   self.db = DatabaseManager()                                     
+
+     12 │                                                                       
+
+     13 │   def initialize_data(self):                                          
+
+     14 │   │   """Initialize data - handled by database"""                     
+
+                                                                                
+
+  /mount/src/studentelectionhub/utils/db_manager.py:42 in __init__              
+
+                                                                                
+
+     39 │   def __init__(self):                                                 
+
+     40 │   │   self.database_url = os.getenv('DATABASE_URL')                   
+
+     41 │   │   if not self.database_url:                                       
+
+  ❱  42 │   │   │   raise ValueError("DATABASE_URL environment variable not fo  
+
+     43 │   │                                                                   
+
+     44 │   │   self.engine = create_engine(self.database_url)                  
+
+     45                                                                         
+
+────────────────────────────────────────────────────────────────────────────────
+
+ValueError: DATABASE_URL environment variable not found
+
+────────────────────── Traceback (most recent call last) ───────────────────────
+
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/state/se  
+
+  ssion_state.py:463 in __getitem__                                             
+
+                                                                                
+
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/state/se  
+
+  ssion_state.py:511 in _getitem                                                
+
+────────────────────────────────────────────────────────────────────────────────
+
+KeyError
+
+
+During handling of the above exception, another exception occurred:
+
+
+────────────────────── Traceback (most recent call last) ───────────────────────
+
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/state/se  
+
+  ssion_state_proxy.py:130 in __getattr__                                       
+
+                                                                                
+
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/state/se  
+
+  ssion_state_proxy.py:101 in __getitem__                                       
+
+                                                                                
+
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/state/sa  
+
+  fe_session_state.py:96 in __getitem__                                         
+
+                                                                                
+
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/state/se  
+
+  ssion_state.py:465 in __getitem__                                             
+
+────────────────────────────────────────────────────────────────────────────────
+
+KeyError: 'st.session_state has no key "teams". Did you forget to initialize it?
+
+More info: 
+
+https://docs.streamlit.io/develop/concepts/architecture/session-state#initializa
+
+tion'
+
+
+During handling of the above exception, another exception occurred:
+
+
+────────────────────── Traceback (most recent call last) ───────────────────────
+
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+
+  nner/exec_code.py:128 in exec_func_with_error_handling                        
+
+                                                                                
+
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+
+  nner/script_runner.py:667 in code_to_exec                                     
+
+                                                                                
+
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptru  
+
+  nner/script_runner.py:165 in _mpa_v1                                          
+
+                                                                                
+
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.  
+
+  py:300 in run                                                                 
+
+                                                                                
+
+  /mount/src/studentelectionhub/app.py:599 in <module>                          
+
+                                                                                
+
+    596 │   │   st.rerun()                                                      
+
+    597                                                                         
+
+    598 if __name__ == "__main__":                                              
+
+  ❱ 599 │   main()                                                              
+
+    600                                                                         
+
+                                                                                
+
+  /mount/src/studentelectionhub/app.py:587 in main                              
+
+                                                                                
+
+    584 │                                                                       
+
+    585 │   # Route to appropriate page based on user role                      
+
+    586 │   if st.session_state.user_role == 'admin':                           
+
+  ❱ 587 │   │   render_admin_dashboard()                                        
+
+    588 │   elif st.session_state.user_role == 'student':                       
+
+    589 │   │   render_student_voting()                                         
+
+    590 │   else:                                                               
+
+                                                                                
+
+  /mount/src/studentelectionhub/pages/admin_dashboard.py:54 in                  
+
+  render_admin_dashboard                                                        
+
+                                                                                
+
+     51 │   if st.session_state.admin_page == "participants":                   
+
+     52 │   │   render_participant_management()                                 
+
+     53 │   elif st.session_state.admin_page == "teams":                        
+
+  ❱  54 │   │   render_team_management()                                        
+
+     55 │   elif st.session_state.admin_page == "voting":                       
+
+     56 │   │   render_voting_status()                                          
+
+     57                                                                         
+
+                                                                                
+
+  /mount/src/studentelectionhub/pages/admin_dashboard.py:318 in                 
+
+  render_team_management                                                        
+
+                                                                                
+
+    315 │   │   │   with col2:                                                  
+
+    316 │   │   │   │   selected_team = st.selectbox(                           
+
+    317 │   │   │   │   │   "팀 할당",                                          
+
+  ❱ 318 │   │   │   │   │   ["선택하세요"] + st.session_state.teams,            
+
+    319 │   │   │   │   │   key=f"assign_{email}"                               
+
+    320 │   │   │   │   )                                                       
+
+    321                                                                         
+
+                                                                                
+
+  /home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/state/se  
+
+  ssion_state_proxy.py:132 in __getattr__                                       
+
+────────────────────────────────────────────────────────────────────────────────
+
+AttributeError: st.session_state has no attribute "teams". Did you forget to 
+
+initialize it? More info: 
+
+https://docs.streamlit.io/develop/concepts/architecture/session-state#initializa
+
+tion
