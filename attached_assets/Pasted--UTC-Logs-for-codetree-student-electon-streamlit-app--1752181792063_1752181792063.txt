@@ -1,0 +1,198 @@
+
+[     UTC     ] Logs for codetree-student-electon.streamlit.app/
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[21:08:41] 🚀 Starting up repository: 'studentelectionhub', branch: 'main', main module: 'app.py'
+
+[21:08:41] 🐙 Cloning repository...
+
+[21:08:41] 🐙 Cloning into '/mount/src/studentelectionhub'...
+
+[21:08:41] 🐙 Cloned repository!
+
+[21:08:41] 🐙 Pulling code changes from Github...
+
+[21:08:42] 📦 Processing dependencies...
+
+Prepared 40 packages in 1.90s
+
+Installed 40 packages in 170ms
+
+ + altair==5.5.0
+
+ + attrs==25.3.0
+
+ + blinker==1.9.0
+
+ + cachetools==6.1.0
+
+ + certifi==2025.7.9
+
+ + charset-normalizer==3.4.2
+
+ + click==8.2.1
+
+ + dnspython==2.7.0
+
+ + email-validator==2.2.0
+
+ + gitdb==4.0.12
+
+ + gitpython==3.1.44
+
+ + idna==3.10
+
+ + jinja2==3.1.6
+
+ [2025-07-10 21:08:44.437363] + jsonschema==4.24.0
+
+ + jsonschema-specifications==2025.4.1
+
+ + markupsafe==3.0.2
+
+ + narwhals==1.46.0
+
+ + numpy==2.3.1
+
+ + packaging==25.0
+
+ + pandas==2.3.1
+
+ + pillow==11.3.0
+
+ + plotly==6.2.0
+
+ + protobuf==6.31.1
+
+ + pyarrow==20.0.0[2025-07-10 21:08:44.437622] 
+
+ + pydeck==0.9.1
+
+ + python-dateutil==2.9.0.post0
+
+ + pytz==2025.2
+
+ + referencing==0.36.2
+
+ + requests==2.32.4
+
+ + rpds-py==0.26.0
+
+ + six==1.17.0[2025-07-10 21:08:44.437803] 
+
+ + smmap==5.0.2
+
+ + streamlit==1.46.1
+
+ + tenacity==9.1.2
+
+ + toml==0.10.2
+
+ + tornado==6.5.1[2025-07-10 21:08:44.438002] 
+
+ + typing-extensions==4.14.1
+
+ + tzdata==2025.2
+
+ + urllib3==2.5.0
+
+ + watchdog==6.0.0
+
+[21:08:44] 🐍 Python dependencies were installed from /mount/src/studentelectionhub/uv.lock using uv-sync.
+
+[21:08:44] 📦 WARN: More than one requirements file detected in the repository. Available options: uv-sync /mount/src/studentelectionhub/uv.lock, uv /mount/src/studentelectionhub/requirements.txt, poetry /mount/src/studentelectionhub/pyproject.toml. Used: uv-sync with /mount/src/studentelectionhub/uv.lock
+
+Check if streamlit is installed
+
+Streamlit is already installed
+
+[21:08:46] 📦 Processed dependencies!
+
+
+
+
+2025-07-10 21:09:38.175 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+2025-07-10 21:09:44.398 Uncaught app execution
+
+Traceback (most recent call last):
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/exec_code.py", line 128, in exec_func_with_error_handling
+
+    result = func()
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 667, in code_to_exec
+
+    _mpa_v1(self._main_script_path)
+
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/runtime/scriptrunner/script_runner.py", line 165, in _mpa_v1
+
+    page.run()
+
+    ~~~~~~~~^^
+
+  File "/home/adminuser/venv/lib/python3.13/site-packages/streamlit/navigation/page.py", line 300, in run
+
+    exec(code, module.__dict__)  # noqa: S102
+
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/mount/src/studentelectionhub/app.py", line 3, in <module>
+
+    from utils.data_manager import DataManager
+
+  File "/mount/src/studentelectionhub/utils/data_manager.py", line 6, in <module>
+
+    from utils.db_manager import DatabaseManager
+
+  File "/mount/src/studentelectionhub/utils/db_manager.py", line 4, in <module>
+
+    from sqlalchemy import create_engine, Column, String, DateTime, Boolean, Integer, Text
+
+ModuleNotFoundError: No module named 'sqlalchemy'
+
+main
+jaebaek-lee/studentelectionhub/main/app.py
+
+
