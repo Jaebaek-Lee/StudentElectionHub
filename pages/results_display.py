@@ -51,21 +51,23 @@ def render_results_display():
         st.metric("총 참여자", stats['total_participants'])
     
     with col2:
-        st.metric("총 투표수", stats['total_votes'])
+        st.metric("총 투표수", stats['total_voted'])
     
     with col3:
-        st.metric("투표율", f"{stats['vote_percentage']:.1f}%")
+        st.metric("투표율", f"{stats['participation_rate']:.1f}%")
     
     with col4:
-        total_received_votes = sum(r['votes'] for r in results_data) if results_data else 0
+        total_received_votes = sum(results_data['team_votes'].values()) if results_data else 0
         st.metric("총 득표수", total_received_votes)
     
     st.markdown("---")
     
     # Check if there are any actual votes
     if results_data and total_received_votes > 0:
+        sorted_results = results_data['sorted_results']
+        
         # Winner announcement
-        if len(results_data) >= 2:
+        if len(sorted_results) >= 2:
             st.markdown("## 🎉 우승팀 발표")
             
             col1, col2 = st.columns(2)
@@ -76,8 +78,8 @@ def render_results_display():
                            color: white; padding: 2rem; border-radius: 15px; 
                            text-align: center; margin: 1rem 0;">
                     <h2>🥇 1위</h2>
-                    <h1>{results_data[0]['team']}</h1>
-                    <h2>{results_data[0]['votes']}표</h2>
+                    <h1>{sorted_results[0][0]}</h1>
+                    <h2>{sorted_results[0][1]}표</h2>
                 </div>
                 """, unsafe_allow_html=True)
             
@@ -87,8 +89,8 @@ def render_results_display():
                            color: white; padding: 2rem; border-radius: 15px; 
                            text-align: center; margin: 1rem 0;">
                     <h2>🥈 2위</h2>
-                    <h1>{results_data[1]['team']}</h1>
-                    <h2>{results_data[1]['votes']}표</h2>
+                    <h1>{sorted_results[1][0]}</h1>
+                    <h2>{sorted_results[1][1]}표</h2>
                 </div>
                 """, unsafe_allow_html=True)
         
@@ -96,8 +98,8 @@ def render_results_display():
         st.markdown("## 📊 전체 결과")
         
         # Create a simple and reliable bar chart using plotly express
-        teams = [r['team'] for r in results_data]
-        votes = [r['votes'] for r in results_data]
+        teams = [r[0] for r in sorted_results]
+        votes = [r[1] for r in sorted_results]
         
         # Create DataFrame for plotly express
         chart_df = pd.DataFrame({

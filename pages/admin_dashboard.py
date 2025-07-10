@@ -37,6 +37,7 @@ def render_admin_dashboard():
     
     with col4:
         if st.button("📈 결과 공개", use_container_width=True):
+            st.session_state.data_manager.db.set_show_results(True)
             st.session_state.show_results = True
             st.rerun()
     
@@ -76,13 +77,13 @@ def render_participant_management():
         st.metric("총 참여자", stats['total_participants'])
     
     with col2:
-        st.metric("투표 완료", stats['total_votes'])
+        st.metric("투표 완료", stats['total_voted'])
     
     with col3:
-        st.metric("투표율", f"{stats['vote_percentage']:.1f}%")
+        st.metric("투표율", f"{stats['participation_rate']:.1f}%")
     
     with col4:
-        st.metric("미투표", stats['remaining_votes'])
+        st.metric("미투표", stats['total_not_voted'])
     
     st.markdown("---")
     
@@ -118,7 +119,8 @@ def render_participant_management():
         
         with col2:
             if st.button("📋 전체 복사"):
-                if st.session_state.participants:
+                participants = st.session_state.data_manager.db.get_participants()
+                if participants:
                     export_text = st.session_state.data_manager.export_participants()
                     st.code(export_text, language="text")
                 else:
@@ -138,13 +140,16 @@ def render_participant_management():
                 st.error("이미 존재하거나 잘못된 이메일입니다.")
     
     # Participant list
-    if st.session_state.participants:
+    participants = st.session_state.data_manager.db.get_participants()
+    if participants:
         st.markdown("### 📋 등록된 참여자 목록")
         
         # Create DataFrame for display
         participant_data = []
-        for email in st.session_state.participants:
-            team = st.session_state.team_assignments.get(email, "미할당")
+        all_teams = st.session_state.data_manager.db.get_teams()
+        
+        for email, info in participants.items():
+            team = info.get('team', "미할당")
             voted = "✅" if st.session_state.data_manager.has_voted(email) else "❌"
             
             participant_data.append({
@@ -165,22 +170,26 @@ def render_participant_management():
             
             with col2:
                 # Team assignment
-                team_options = ["미할당"] + st.session_state.teams
-                current_team = st.session_state.team_assignments.get(row['이메일'], "미할당")
+                team_options = ["미할당"] + all_teams
+                current_team = row['팀'] if row['팀'] != "미할당" else "미할당"
+                
+                try:
+                    current_index = team_options.index(current_team)
+                except ValueError:
+                    current_index = 0
                 
                 new_team = st.selectbox(
                     "팀 변경",
                     team_options,
-                    index=team_options.index(current_team),
+                    index=current_index,
                     key=f"team_{idx}"
                 )
                 
                 if new_team != current_team:
                     if new_team == "미할당":
-                        if row['이메일'] in st.session_state.team_assignments:
-                            del st.session_state.team_assignments[row['이메일']]
+                        st.session_state.data_manager.db.assign_team(row['이메일'], None)
                     else:
-                        st.session_state.team_assignments[row['이메일']] = new_team
+                        st.session_state.data_manager.db.assign_team(row['이메일'], new_team)
                     st.rerun()
             
             with col3:
@@ -222,8 +231,9 @@ def render_team_management():
             # Display existing teams with delete option
             teams_to_keep = []
             teams_to_delete = []
+            all_teams = st.session_state.data_manager.db.get_teams()
             
-            for i, team in enumerate(st.session_state.teams):
+            for i, team in enumerate(all_teams):
                 col1, col2, col3 = st.columns([3, 1, 1])
                 
                 with col1:
@@ -233,33 +243,22 @@ def render_team_management():
                 
                 with col2:
                     # Prevent deletion if it's the last team
-                    can_delete = len(st.session_state.teams) > 1
+                    can_delete = len(all_teams) > 1
                     
                     if st.button("🗑️", key=f"delete_team_{i}", help="팀 삭제", disabled=not can_delete):
                         if can_delete:
-                            teams_to_delete.append(team)
-                            # Remove assignments for this team
-                            emails_to_unassign = [email for email, assigned_team in st.session_state.team_assignments.items() if assigned_team == team]
-                            for email in emails_to_unassign:
-                                del st.session_state.team_assignments[email]
-                            
-                            # Remove from teams list
-                            st.session_state.teams.remove(team)
-                            
-                            # Remove from vote counts
-                            if team in st.session_state.vote_counts:
-                                del st.session_state.vote_counts[team]
-                            
+                            st.session_state.data_manager.db.remove_team(team)
                             st.success(f"'{team}' 팀이 삭제되었습니다.")
                             st.rerun()
                 
                 with col3:
                     # Show team member count
-                    member_count = sum(1 for email, assigned_team in st.session_state.team_assignments.items() if assigned_team == team)
+                    team_stats = st.session_state.data_manager.db.get_team_stats()
+                    member_count = team_stats["team_counts"].get(team, 0)
                     st.write(f"멤버: {member_count}명")
                     
                     # Show warning if last team
-                    if len(st.session_state.teams) == 1:
+                    if len(all_teams) == 1:
                         st.caption("(마지막 팀)")
             
             st.markdown("---")
@@ -277,9 +276,7 @@ def render_team_management():
             with col2:
                 if st.button("➕ 팀 추가", use_container_width=True):
                     if new_team_name.strip():
-                        if new_team_name.strip() not in st.session_state.teams:
-                            st.session_state.teams.append(new_team_name.strip())
-                            st.session_state.vote_counts[new_team_name.strip()] = 0
+                        if st.session_state.data_manager.db.add_team(new_team_name.strip()):
                             # Clear the input field by incrementing the counter to create a new widget key
                             st.session_state.team_input_clear_counter += 1
                             st.success(f"'{new_team_name.strip()}' 팀이 추가되었습니다.")

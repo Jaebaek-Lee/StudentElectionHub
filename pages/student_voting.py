@@ -90,7 +90,8 @@ def render_student_voting():
         st.markdown("---")
         
         # Get available teams (excluding user's team)
-        available_teams = [team for team in st.session_state.teams if team != user_team]
+        all_teams = st.session_state.data_manager.db.get_teams()
+        available_teams = [team for team in all_teams if team != user_team]
         
         if len(available_teams) < 2:
             st.error("투표 가능한 팀이 부족합니다. 관리자에게 문의하세요.")

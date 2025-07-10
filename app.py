@@ -74,11 +74,29 @@ st.markdown("""
         padding: 0.5rem 1rem;
         font-weight: bold;
         transition: all 0.3s ease;
+        background: linear-gradient(135deg, #33BB66, #28A745) !important;
+        color: white !important;
+        border-color: transparent !important;
     }
     
     .stButton > button:hover {
         transform: translateY(-2px);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, #28A745, #1E7E34) !important;
+        border-color: transparent !important;
+    }
+    
+    .stButton > button:focus {
+        background: linear-gradient(135deg, #33BB66, #28A745) !important;
+        color: white !important;
+        border-color: transparent !important;
+        box-shadow: 0 0 0 2px rgba(51, 187, 102, 0.3) !important;
+    }
+    
+    .stButton > button:active {
+        background: linear-gradient(135deg, #28A745, #1E7E34) !important;
+        color: white !important;
+        border-color: transparent !important;
     }
     
     .metric-card {
