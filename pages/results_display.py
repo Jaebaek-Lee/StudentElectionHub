@@ -41,8 +41,8 @@ def render_results_display():
     """, unsafe_allow_html=True)
     
     # Get results data
-    results_data = st.session_state.data_manager.get_results_data()
-    stats = st.session_state.data_manager.get_voting_stats()
+    results_data = st.session_state.data_manager.db.get_results_data()
+    stats = st.session_state.data_manager.db.get_voting_stats()
     
     # Overall statistics
     col1, col2, col3, col4 = st.columns(4)
@@ -132,9 +132,10 @@ def render_results_display():
         # Results table
         st.markdown("## 📋 상세 순위")
         
-        df = pd.DataFrame(results_data)
+        # Create DataFrame from sorted results
+        df_data = [{'팀명': team, '득표수': votes} for team, votes in sorted_results]
+        df = pd.DataFrame(df_data)
         df.index = range(1, len(df) + 1)
-        df.columns = ['팀명', '득표수']
         
         # Style the dataframe
         styled_df = df.style.apply(lambda x: ['background-color: #FFD700' if x.name == 1 
@@ -166,12 +167,12 @@ def render_results_display():
         
         # Percentage table
         percentage_data = []
-        for result in results_data:
-            percentage = (result['votes'] / total_received_votes) * 100
+        for i, (team, votes_count) in enumerate(sorted_results):
+            percentage = (votes_count / total_received_votes) * 100 if total_received_votes > 0 else 0
             percentage_data.append({
-                '순위': results_data.index(result) + 1,
-                '팀명': result['team'],
-                '득표수': result['votes'],
+                '순위': i + 1,
+                '팀명': team,
+                '득표수': votes_count,
                 '득표율': f"{percentage:.1f}%"
             })
         
@@ -214,9 +215,10 @@ def render_results_display():
         """, unsafe_allow_html=True)
         
         # Show current teams
-        if st.session_state.teams:
+        teams = st.session_state.data_manager.db.get_teams()
+        if teams:
             st.markdown("### 📋 등록된 팀 목록")
-            for i, team in enumerate(st.session_state.teams, 1):
+            for i, team in enumerate(teams, 1):
                 st.write(f"{i}. **{team}**")
     
     # Navigation controls - always show for anyone who can access results
